@@ -2,16 +2,16 @@
 
 s = input("Enter your string s: ")
 
-prevChar = ""
-currentString = ""
-longestString = ""
+prev_char = ""
+current_string = ""
+longest_string = ""
 
 for char in s:
-    if prevChar <= char:
-        currentString += char
-        if len(currentString) > len(longestString):
-            longestString = currentString
+    if prev_char <= char:
+        current_string += char
+        if len(current_string) > len(longest_string):
+            longest_string = current_string
     else:
-        currentString = char
-    prevChar = char
-print('Longest substring in alphabetical order is: ' + longestString )
+        current_string = char
+    prev_char = char
+print('Longest substring in alphabetical order is: ' + longest_string )
