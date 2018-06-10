@@ -1,17 +1,22 @@
 # https://codereview.stackexchange.com/questions/188033/longest-substring-in-alphabetical-order
 
-s = input("Enter your string s: ")
+#s = input("Enter your string s: ")
 
-prev_char = ""
-current_string = ""
-longest_string = ""
+s = 'cabzaabbcczab'
 
-for char in s:
-    if prev_char <= char:
-        current_string += char
-        if len(current_string) > len(longest_string):
-            longest_string = current_string
+previous = ''
+current = ''
+longest= ''
+
+for c in s:
+    if c >= previous:
+        current += c
+        
+        if len(longest) < len(current):
+            longest = current
     else:
-        current_string = char
-    prev_char = char
-print('Longest substring in alphabetical order is: ' + longest_string )
+        current = c
+
+    previous = c        
+    
+print(longest)
