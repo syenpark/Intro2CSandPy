@@ -12,9 +12,8 @@ def gcdIter(a, b):
 
     returns: a positive integer, the greatest common divisor of a & b.
     '''
-    test = min(a, b)
 
-    for i in range(test, 1, -1):
+    for i in range(min(a, b), 1, -1):
         if (a%i | b%i) == 0:
             return i
     return 1
