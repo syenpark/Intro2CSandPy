@@ -12,11 +12,16 @@ This repository is for my lecture notes of [Introduction to Computer Science and
 - A Program Counter
 - Syntax VS. Static semantics VS. Semantics
 #### Problem Set 1
-- Problem 2: [The number of times a substring occurs in a string](https://github.com/syenpark/Intro2CSandPy/blob/master/Week1/ProblemSet1/problem2_number_of_times_occurs.py)
-- Problem 3: [Longest substring in alphabetical order](https://github.com/syenpark/Intro2CSandPy/blob/master/Week1/ProblemSet1/problem3_better_solution.py)
+- Problem 2: [The number of times a substring occurs in a string]()
+- Problem 3: [Longest substring in alphabetical order]()
 ---
 ### __Week 2: Simple Algorithms__
-Not every 'Number' can be stored exactly because computer machine uses binary digits. Some are represented approximately. Here is examples of finding root to show the way machine deals with numbers.
+#### Concepts and Terminologies
+- Computer machine is a binary system, so..
+ Not every *number* can be stored exactly in a computer machine because a computer machine uses only binary digits. 
+
+> If there is no integer p such that x*(2**p) is a whole number, then internal representation is always an approximation
+
 - #### Exhaustive unumeration
   
 - #### Bisection Search
