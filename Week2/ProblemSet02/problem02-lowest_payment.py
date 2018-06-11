@@ -10,7 +10,7 @@ ii = 1
 
 while True:
     balance = 4773
-    annualInterestRate = 0.2
+    annualInterestRate = 0.18
     monthlyInterestRate = annualInterestRate / 12.0
     
     for i in range(12):
