@@ -1,5 +1,5 @@
 # Intro2CSandPy
-[Introduction to Computer Science and Programming Using Python (edX)](https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2017_2/)
+This repository is for my lecture notes of [Introduction to Computer Science and Programming Using Python (edX)](https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2017_2/).
 
 ### __Week 1: Python Basics__
 
