@@ -8,8 +8,13 @@ Python Version: 3.6
     
 cube = int(input('Enter a whole number: '))
 
-low  = 0.0
-high = cube
+if cube < 0:
+    low = cube
+    high = 0
+else:
+    low = 0
+    high = cube
+    
 epsilon = 0.01
 num_guesses = 0
 
@@ -30,5 +35,3 @@ while True:
         high = guess
         
     num_guesses += 1
-    
-print('Fail')
