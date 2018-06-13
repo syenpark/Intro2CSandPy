@@ -6,7 +6,7 @@ Spyder Editor
 Python Version: 3.6
 """
     
-cube = int(input('Enter a whole number: '))
+cube = int(input('Enter an integer: '))
 
 if cube < 0:
     low = cube
