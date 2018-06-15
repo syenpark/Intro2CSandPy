@@ -1,3 +1,4 @@
+
 # Intro2CSandPy
 This repository is for my lecture notes of [Introduction to Computer Science and Programming Using Python (edX)](https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2017_2/).
 
@@ -11,9 +12,11 @@ This repository is for my lecture notes of [Introduction to Computer Science and
 - A Stored Program Computer VS. A Fixed Program Computer
 - A Program Counter
 - Syntax VS. Static semantics VS. Semantics
-#### Problem Set 1
-- Problem 2: [The number of times a substring occurs in a string]()
-- Problem 3: [Longest substring in alphabetical order]()
+#### [Problem Set 1](https://github.com/syenpark/Intro2CSandPy/tree/master/Week1/problem_set1)
+- Problem 2: The number of times a substring occurs in a string
+- Problem 3: Longest substring in alphabetical order
+	*What I learnt; 
+	Python style guide to accumulate a string* 
 ---
 ### __Week 2: Simple Algorithms__
 #### Concepts and Terminologies
