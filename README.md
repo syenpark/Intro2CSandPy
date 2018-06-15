@@ -1,4 +1,3 @@
-
 # Intro2CSandPy
 This repository is for my lecture notes of [Introduction to Computer Science and Programming Using Python (edX)](https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2017_2/).
 
@@ -37,3 +36,8 @@ Some problems are solved intuitivey and concisely with a recursion approach such
 #### Practice 3
 #### Practice 4
 #### Problem Set 2
+---
+### __Week 3: Structured Types__
+#### Concepts and Terminologies
+- Tuples and Lists
+ Tuples: immutable, frequently used to do swap variables or return more than one value.
