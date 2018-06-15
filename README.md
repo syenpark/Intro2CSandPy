@@ -40,4 +40,4 @@ Some problems are solved intuitivey and concisely with a recursion approach such
 ### __Week 3: Structured Types__
 #### Concepts and Terminologies
 - Tuples and Lists
- Tuples: immutable, frequently used to do swap variables or return more than one value.
+ Tuples: immutable, iterable, and frequently used to do swap variables or return more than one value.
