@@ -41,3 +41,4 @@ Some problems are solved intuitivey and concisely with a recursion approach such
 #### Concepts and Terminologies
 - Tuples and Lists
  Tuples: immutable, iterable, and frequently used to do swap variables or return more than one value.
+ Lists: mmutable, iterable, del(L[index]), L.remove(element), L.pop()
