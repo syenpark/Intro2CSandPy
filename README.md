@@ -1,4 +1,3 @@
-
 # Intro2CSandPy
 This repository is for my lecture notes of [Introduction to Computer Science and Programming Using Python (edX)](https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2017_2/).
 
@@ -26,7 +25,8 @@ This repository is for my lecture notes of [Introduction to Computer Science and
 > If there is no integer p such that x*(2**p) is a whole number, then internal representation is always an approximation
 
 - #### Exhaustive unumeration
-  
 - #### Bisection Search
 	[Bisection Method](https://en.wikipedia.org/wiki/Bisection_method) VS. Binary Search
 - #### Newton-Raphson
+- #### Recursion
+	- Some problems are solved intuitivey and concisely with a recursion approach such as Tower of Hanoi. In a technical interview, it is one of common questions to convert interation loops to recursion for interviewees, and vice versa. However, iteration loops are usually better for performance reasons. 
