@@ -127,7 +127,6 @@ def hangman(secretWord):
         guess = input('Please guess a letter: ')
         guessInLowerCase = guess.lower()
         
-        
         if guessInLowerCase in secretWord and guessInLowerCase not in letters:
             letters.append(guessInLowerCase)
             print('Good guess: ', getGuessedWord(secretWord, letters))
@@ -142,7 +141,7 @@ def hangman(secretWord):
             print('Oops! That letter is not in my word:', getGuessedWord(secretWord, letters))
             mistakes -= 1
     
-    if mistakes == 0:
+    if not mistakes:
         print('-------------')
         print('Sorry, you ran out of guesses. The word was', secretWord) 
 
