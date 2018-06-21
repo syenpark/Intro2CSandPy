@@ -199,7 +199,12 @@ def calculateHandlen(hand):
     hand: dictionary (string-> int)
     returns: integer
     """
-    # TO DO... <-- Remove this comment when you code this function
+    valid = 0
+    
+    for c in hand:
+        valid += hand[c]
+    
+    return valid
 
 
 
