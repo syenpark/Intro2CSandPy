@@ -129,41 +129,31 @@ def playGame(wordList):
         
         if command == 'n':
             hand = dealHand(HAND_SIZE)
-            while True:
-                who = input('Enter u to have your self play, c to have the computer play:')
-            
-                if who == 'u':
-                    playHand(hand, wordList, HAND_SIZE)
-                    break
-                elif who == 'c':
-                    compPlayHand(hand, wordList, HAND_SIZE)
-                    break
-                else:
-                    print('Invalid command.')
+            play(hand, wordList, HAND_SIZE)
         elif command == 'r':
             try: 
                 hand
             except:
                 print('You have not played a hand yet. Please play a new hand first!')
             else:
-                while True:
-                    who = input('Enter u to have your self play, c to have the computer play:')
-                 
-                    if who == 'u':
-                        playHand(hand, wordList, HAND_SIZE)
-                        break
-                    elif who == 'c':
-                        compPlayHand(hand, wordList, HAND_SIZE)
-                        break
-                    else:
-                        print('Invalid command.')
-                 
+                play(hand, wordList, HAND_SIZE)
         elif command == 'e':
             break
         else:
             print('Invalid command.')
 
-        
+def play(hand, wordList, HAND_SIZE):
+    while True:
+        who = input('Enter u to have your self play, c to have the computer play:')
+            
+        if who == 'u':
+            playHand(hand, wordList, HAND_SIZE)
+            break
+        elif who == 'c':
+            compPlayHand(hand, wordList, HAND_SIZE)
+            break
+        else:
+            print('Invalid command.')    
 #
 # Build data structures used for entire session and play game
 #
