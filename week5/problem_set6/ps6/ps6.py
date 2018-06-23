@@ -128,19 +128,14 @@ class Message(object):
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
         '''
-        lower_cases = string.ascii_lowercase
-        upper_cases = string.ascii_uppercase
         new_str = []
+        shift_dict = self.build_shift_dict(shift)
         
         for c in self.message_text:
-            if c in lower_cases:
-                shifted = lower_cases[((lower_cases.index(c) + shift) % 26)]
-            elif c in upper_cases:
-                shifted = upper_cases[((upper_cases.index(c) + shift) % 26)]
+            if c in shift_dict.keys():
+                new_str.append(shift_dict[c])
             else:
-                shifted = c
-            
-            new_str.append(shifted)
+                new_str.append(c)
         
         return ''.join(new_str)
 
@@ -239,7 +234,7 @@ class CiphertextMessage(Message):
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
 print('Expected Output: jgnnq')
-print('Actual Output:', plaintext.build_shift_dict(2), plaintext.get_message_text_encrypted())
+print('Actual Output:', plaintext.get_message_text_encrypted())
     
 #Example test case (CiphertextMessage)
 ciphertext = CiphertextMessage('jgnnq')
