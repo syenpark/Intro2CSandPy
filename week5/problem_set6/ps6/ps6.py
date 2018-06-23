@@ -136,7 +136,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less 
         code is repeated
         '''
-        pass #delete this line and replace with your code here
+        super().__init__(text)
 
     def get_shift(self):
         '''
