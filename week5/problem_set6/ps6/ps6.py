@@ -102,7 +102,19 @@ class Message(object):
         Returns: a dictionary mapping a letter (string) to 
                  another letter (string). 
         '''
-        pass #delete this line and replace with your code here
+        lower_cases = string.ascii_lowercase
+        upper_cases = string.ascii_uppercase
+        
+        shifted_dict = {}
+        
+        shifted_lower_cases = lower_cases[shift:] + lower_cases[:shift]
+        shifted_upper_cases = upper_cases[shift:] + upper_cases[:shift]
+        
+        for i in range(len(lower_cases)):
+            shifted_dict[lower_cases[i]] = shifted_lower_cases[i]
+            shifted_dict[upper_cases[i]] = shifted_upper_cases[i]
+            
+        return shifted_dict
 
     def apply_shift(self, shift):
         '''
@@ -227,7 +239,7 @@ class CiphertextMessage(Message):
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
 print('Expected Output: jgnnq')
-print('Actual Output:', plaintext.apply_shift(2), plaintext.get_message_text_encrypted())
+print('Actual Output:', plaintext.build_shift_dict(2), plaintext.get_message_text_encrypted())
     
 #Example test case (CiphertextMessage)
 ciphertext = CiphertextMessage('jgnnq')
