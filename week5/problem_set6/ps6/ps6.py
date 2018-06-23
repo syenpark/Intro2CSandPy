@@ -246,7 +246,9 @@ class CiphertextMessage(Message):
                 
         return (26+best_shift, ''.join(super().apply_shift(best_shift)))
                 
-        
+def decrypt_story():
+    secret = CiphertextMessage(get_story_string())
+    return secret.decrypt_message()
 
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
