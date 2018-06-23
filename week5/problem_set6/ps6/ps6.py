@@ -231,7 +231,22 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        pass #delete this line and replace with your code here
+        best = 0
+        best_shift = 0
+        
+        for shift in range(-1, -27, -1):
+            shifted_words = super().apply_shift(shift)
+            shifted_words = shifted_words.split(' ')
+            
+            valid_frequency = [is_word(self.valid_words, word) for word in shifted_words].count(True)
+        
+            if best < valid_frequency:
+                best = valid_frequency
+                best_shift = shift
+                
+        return (26+best_shift, ''.join(super().apply_shift(best_shift)))
+                
+        
 
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
