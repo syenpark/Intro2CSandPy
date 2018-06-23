@@ -116,7 +116,21 @@ class Message(object):
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
         '''
-        pass #delete this line and replace with your code here
+        lower_cases = string.ascii_lowercase
+        upper_cases = string.ascii_uppercase
+        new_str = []
+        
+        for c in self.message_text:
+            if c in lower_cases:
+                shifted = lower_cases[((lower_cases.index(c) + shift) % 26)]
+            elif c in upper_cases:
+                shifted = upper_cases[((upper_cases.index(c) + shift) % 26)]
+            else:
+                shifted = c
+            
+            new_str.append(shifted)
+        
+        return ''.join(new_str)
 
 class PlaintextMessage(Message):
     def __init__(self, text, shift):
@@ -137,6 +151,9 @@ class PlaintextMessage(Message):
         code is repeated
         '''
         super().__init__(text)
+        self.shift = shift
+        self.encrypting_dict = {}
+        self.message_text_encrypted = ''
 
     def get_shift(self):
         '''
@@ -160,7 +177,7 @@ class PlaintextMessage(Message):
         
         Returns: self.message_text_encrypted
         '''
-        pass #delete this line and replace with your code here
+        return self.message_text_encrypted
 
     def change_shift(self, shift):
         '''
@@ -210,7 +227,7 @@ class CiphertextMessage(Message):
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
 print('Expected Output: jgnnq')
-print('Actual Output:', plaintext.get_message_text_encrypted())
+print('Actual Output:', plaintext.apply_shift(2), plaintext.get_message_text_encrypted())
     
 #Example test case (CiphertextMessage)
 ciphertext = CiphertextMessage('jgnnq')
