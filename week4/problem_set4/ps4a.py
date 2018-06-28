@@ -288,7 +288,6 @@ def playGame(wordList):
             break
         else:
             print('Invalid command.')
-            continue
             
 #
 # Build data structures used for entire session and play game
