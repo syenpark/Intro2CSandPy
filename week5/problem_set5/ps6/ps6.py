@@ -157,10 +157,10 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less 
         code is repeated
         '''
-        super().__init__(text)
+        Message.__init__(self, text)
         self.shift = shift
-        self.encrypting_dict = super().build_shift_dict(shift)
-        self.message_text_encrypted = super().apply_shift(shift)
+        self.encrypting_dict = Message.build_shift_dict(self, shift)
+        self.message_text_encrypted = Message.apply_shift(self, shift)
 
     def get_shift(self):
         '''
@@ -198,8 +198,8 @@ class PlaintextMessage(Message):
         Returns: nothing
         '''
         self.shift = shift
-        self.encrypting_dict = super().build_shift_dict(shift)
-        self.message_text_encrypted = super().apply_shift(shift)
+        self.encrypting_dict = Message.build_shift_dict(self, shift)
+        self.message_text_encrypted = Message.apply_shift(self, shift)
 
 
 class CiphertextMessage(Message):
@@ -213,7 +213,7 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
-        super().__init__(text)
+        Message.__init__(self, text)
 
     def decrypt_message(self):
         '''
@@ -235,7 +235,7 @@ class CiphertextMessage(Message):
         best_shift = 0
         
         for shift in range(-1, -27, -1):
-            shifted_words = super().apply_shift(shift)
+            shifted_words = Message.apply_shift(self, shift)
             shifted_words = shifted_words.split(' ')
             
             valid_frequency = [is_word(self.valid_words, word) for word in shifted_words].count(True)
@@ -244,7 +244,7 @@ class CiphertextMessage(Message):
                 best = valid_frequency
                 best_shift = shift
                 
-        return (26+best_shift, ''.join(super().apply_shift(best_shift)))
+        return (26+best_shift, ''.join(Message.apply_shift(self, best_shift)))
                 
 def decrypt_story():
     secret = CiphertextMessage(get_story_string())
