@@ -45,3 +45,12 @@ Some problems are solved intuitivey and concisely with a recursion approach such
   mmutable, iterable, del(L[index]), L.remove(element), L.pop()
 - Dictionaries
   no order and keys should be unique and immutable.
+
+---
+### __Week 6: Algorithmic Complexity__
+#### Concepts and Terminologies
+- Bisection Search
+- Bogo Sort
+- Bubble Sort
+- Selection Sort
+- Merge Sort
