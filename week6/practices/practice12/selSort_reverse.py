@@ -8,14 +8,14 @@ Python Version: 3.6
 def selection_sort(L):
     
     for i in range(0, len(L)-1):
-        smaller = i
+        bigger = i
         
         for j in range(i+1, len(L)):
-            if L[smaller] > L[j]:
-                smaller = j
+            if L[bigger] < L[j]:
+                bigger = j
         
-        if smaller != i:
-            L[smaller], L[i] = L[i], L[smaller]
+        if bigger != i:
+            L[bigger], L[i] = L[i], L[bigger]
             
 
 test = [64, 25, 12, 22, 11]
